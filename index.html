@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riccardo Di Paola</title>
+  <meta name="description" content="Le poesie di Riccardo Di Paola (Milano 1948 – Namibia 2003), con la vita, un glossario e le immagini ricorrenti.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/stile.css">
+  <script>
+    try {
+      const t = localStorage.getItem("tema");
+      if (t) document.documentElement.dataset.theme = t;
+      if (localStorage.getItem("soloTesto") === "1") document.documentElement.classList.add("solo-testo");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="salta" href="#contenuto">Vai al testo</a>
+  <header class="testata">
+    <a class="nome" href="#/">Riccardo Di Paola</a>
+    <nav aria-label="Sezioni">
+      <a href="#/poesie" data-sez="poesie">Poesie</a>
+      <a href="#/vita" data-sez="vita">Vita</a>
+      <a href="#/parole" data-sez="parole">Parole</a>
+      <a href="#/ricorrenze" data-sez="ricorrenze">Ricorrenze</a>
+      <a href="#/ritratti" data-sez="ritratti">Ritratti</a>
+    </nav>
+    <button class="tema" type="button" aria-label="Cambia tra giorno e notte"></button>
+  </header>
+
+  <main id="contenuto" tabindex="-1"></main>
+
+  <footer class="piede">
+    <span>Riccardo Di Paola · 1948–2003</span>
+  </footer>
+
+  <script src="js/poesie.js"></script>
+  <script src="js/contenuti.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
